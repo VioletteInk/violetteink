@@ -1,0 +1,176 @@
+---
+const title = "Violette — History deserves to be carried.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A free archive of printable artwork and historical field files."
+    />
+    <title>{title}</title>
+
+    <style>
+      :root {
+        --archive-black: #10100f;
+        --paper: #f2eee4;
+        --signal-red: #b52a2a;
+        --steel: #8d8a83;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--archive-black);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top, #24231f 0%, var(--archive-black) 54%);
+        color: var(--paper);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+
+      .archive-card {
+        width: min(100%, 760px);
+        border: 1px solid rgba(242, 238, 228, 0.35);
+        padding: clamp(2rem, 7vw, 5rem);
+        text-align: center;
+        position: relative;
+      }
+
+      .archive-card::before,
+      .archive-card::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-color: var(--signal-red);
+        border-style: solid;
+      }
+
+      .archive-card::before {
+        top: -1px;
+        left: -1px;
+        border-width: 2px 0 0 2px;
+      }
+
+      .archive-card::after {
+        right: -1px;
+        bottom: -1px;
+        border-width: 0 2px 2px 0;
+      }
+
+      .document-number {
+        margin: 0 0 2.5rem;
+        color: var(--steel);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(3.2rem, 12vw, 7.5rem);
+        letter-spacing: 0.13em;
+        line-height: 0.9;
+        text-indent: 0.13em;
+      }
+
+      .mark {
+        color: var(--signal-red);
+        font-size: 2rem;
+        line-height: 1;
+        margin: 2rem 0;
+      }
+
+      .motto {
+        margin: 0;
+        font-size: clamp(1.35rem, 3vw, 2rem);
+        font-style: italic;
+      }
+
+      .description {
+        max-width: 540px;
+        margin: 2rem auto 0;
+        color: #d2cec4;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .divider {
+        width: min(100%, 420px);
+        height: 1px;
+        margin: 2.5rem auto;
+        background: rgba(242, 238, 228, 0.35);
+      }
+
+      .opening {
+        margin: 0;
+        color: var(--steel);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: var(--paper);
+        text-underline-offset: 0.2em;
+      }
+
+      .contact {
+        margin: 1.25rem 0 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="archive-card" aria-labelledby="site-title">
+        <p class="document-number">Public Record · Established 2026</p>
+
+        <h1 id="site-title">VIOLETTE</h1>
+
+        <div class="mark" aria-hidden="true">✦</div>
+
+        <p class="motto">History deserves to be carried.</p>
+
+        <p class="description">
+          A free archive of printable artwork, maker files, and field notes
+          inspired by people and movements that defended democracy, resisted
+          authoritarianism, and expanded human dignity.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="opening">The archive opens soon.</p>
+
+        <p class="contact">
+          <a href="mailto:resist@violette.ink">resist@violette.ink</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>  
