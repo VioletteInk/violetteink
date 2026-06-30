@@ -1,0 +1,499 @@
+---
+const title = "Common Record 001 — Violette Szabó | Violette";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Common Record 001: Violette Szabó, Special Operations Executive agent in occupied France."
+        />
+        <title>{title}</title>
+
+        <style>
+            :root {
+                --archive-black: #10100f;
+                --paper: #f2eee4;
+                --signal-red: #b52a2a;
+                --steel: #8d8a83;
+                --line: rgba(242, 238, 228, 0.24);
+                --panel: rgba(242, 238, 228, 0.035);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                background: var(--archive-black);
+            }
+
+            body {
+                margin: 0;
+                background: radial-gradient(
+                    circle at top,
+                    #24231f 0%,
+                    var(--archive-black) 52%
+                );
+                color: var(--paper);
+                font-family: Georgia, "Times New Roman", serif;
+            }
+
+            a {
+                color: inherit;
+                text-underline-offset: 0.2em;
+            }
+
+            .shell {
+                width: min(100% - 2rem, 1100px);
+                margin: 0 auto;
+                padding: 1.5rem 0 5rem;
+            }
+
+            .topbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                padding-bottom: 1.25rem;
+                border-bottom: 1px solid var(--line);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            .wordmark {
+                text-decoration: none;
+                letter-spacing: 0.18em;
+            }
+
+            .back-link {
+                color: var(--steel);
+                text-decoration: none;
+            }
+
+            .back-link:hover {
+                color: var(--paper);
+            }
+
+            .record-header {
+                padding: clamp(3rem, 8vw, 6rem) 0 3.5rem;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .record-lead {
+                display: grid;
+                grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+                gap: clamp(2rem, 6vw, 6rem);
+                align-items: start;
+            }
+
+            .eyebrow,
+            .section-label {
+                margin: 0 0 1.25rem;
+                color: var(--signal-red);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                max-width: 760px;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: clamp(3.5rem, 9vw, 8rem);
+                letter-spacing: -0.07em;
+                line-height: 0.84;
+                text-transform: uppercase;
+            }
+
+            .dek {
+                max-width: 620px;
+                margin: 2rem 0 0;
+                color: #d2cec4;
+                font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+                line-height: 1.6;
+            }
+
+         
+
+            .hero-figure {
+                margin: 0;
+            }
+
+            .hero-frame {
+                padding: 0.7rem;
+                border: 1px solid var(--line);
+                background: var(--panel);
+            }
+
+            .hero-image {
+                display: block;
+                width: 100%;
+                aspect-ratio: 4 / 5;
+                object-fit: cover;
+                object-position: center top;
+                filter: grayscale(100%) contrast(1.08);
+            }
+
+            .hero-figure figcaption {
+                margin-top: 0.8rem;
+                color: var(--steel);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.67rem;
+                line-height: 1.55;
+                letter-spacing: 0.03em;
+            }
+
+            .metadata {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                margin-top: 3rem;
+                border-top: 1px solid var(--line);
+                border-left: 1px solid var(--line);
+            }
+
+            .metadata div {
+                min-height: 110px;
+                padding: 1.15rem;
+                border-right: 1px solid var(--line);
+                border-bottom: 1px solid var(--line);
+            }
+
+            .metadata dt,
+            .record-card dt {
+                color: var(--steel);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.68rem;
+                font-weight: 700;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+            }
+
+            .metadata dd {
+                margin: 0.55rem 0 0;
+                font-size: 1.05rem;
+                line-height: 1.35;
+            }
+
+            .content-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+                gap: clamp(2rem, 7vw, 7rem);
+                padding-top: clamp(3rem, 8vw, 6rem);
+            }
+
+            h2 {
+                margin: 0 0 1.25rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: clamp(1.8rem, 3vw, 2.8rem);
+                letter-spacing: -0.04em;
+            }
+
+            .body-copy {
+                color: #ded9cf;
+                font-size: 1.13rem;
+                line-height: 1.8;
+            }
+
+            .body-copy p:first-of-type {
+                margin-top: 0;
+                color: var(--paper);
+                font-size: 1.28rem;
+            }
+
+            .record-card {
+                padding: 1.5rem;
+                border: 1px solid var(--line);
+                background: var(--panel);
+            }
+
+            .record-card dl {
+                margin: 0;
+            }
+
+            .record-card div {
+                padding: 1.1rem 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .record-card div:last-child {
+                border-bottom: 0;
+            }
+
+            .record-card dd {
+                margin: 0.45rem 0 0;
+                line-height: 1.45;
+            }
+
+            .downloads,
+            .sources {
+                margin-top: clamp(4rem, 9vw, 8rem);
+                padding-top: 2rem;
+                border-top: 1px solid var(--line);
+            }
+
+            .download-grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 1rem;
+            }
+
+            .download-card {
+                min-height: 150px;
+                padding: 1.25rem;
+                border: 1px solid var(--line);
+                text-decoration: none;
+            }
+
+            .download-card:hover {
+                border-color: var(--signal-red);
+            }
+
+            .download-card span {
+                display: block;
+                color: var(--steel);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.68rem;
+                font-weight: 700;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+            }
+
+            .download-card strong {
+                display: block;
+                margin-top: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2rem;
+            }
+
+            .download-card em {
+                display: block;
+                margin-top: 0.5rem;
+                color: var(--steel);
+                font-size: 0.95rem;
+            }
+
+            .sources ul {
+                padding-left: 1.2rem;
+                color: #d2cec4;
+                line-height: 1.8;
+            }
+
+            .footer-note {
+                margin-top: 5rem;
+                color: var(--steel);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 0.7rem;
+                letter-spacing: 0.12em;
+                line-height: 1.7;
+                text-transform: uppercase;
+            }
+
+            @media (max-width: 760px) {
+                .record-lead,
+                .content-grid,
+                .download-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .metadata {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                .hero-figure {
+                    max-width: 430px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main class="shell">
+            <nav class="topbar" aria-label="Primary navigation">
+                <a class="wordmark" href="/">Violette</a>
+                <a class="back-link" href="/">Return to archive</a>
+            </nav>
+
+            <header class="record-header">
+                <div class="record-lead">
+                    <div>
+                        <p class="eyebrow">
+                            Common Record 001 · Public Release
+                        </p>
+
+                        <h1>Violette<br />Szabó</h1>
+
+                        <p class="dek">
+                            British Special Operations Executive agent. Courier,
+                            resistance operative, and one of the women who
+                            served with F Section in occupied France.
+                        </p>
+                    </div>
+
+                    <figure class="hero-figure">
+                        <div class="hero-frame">
+                            <img
+                                class="hero-image"
+                                src="/images/records/violette-szabo-hero.jpg"
+                                alt="Black-and-white portrait of Violette Szabó looking slightly to her right."
+                            />
+                        </div>
+
+                        <figcaption>
+                            Portrait of Violette Szabó, prior to June 1944.<br
+                            />
+                            Imperial War Museums, HU 16541. Public domain via
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Violette_Szabo_IWM_photo.jpg"
+                            >
+                                Wikimedia Commons
+                            </a>.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <dl class="metadata">
+                    <div>
+                        <dt>Years</dt>
+                        <dd>1921–1945</dd>
+                    </div>
+                    <div>
+                        <dt>Area of operation</dt>
+                        <dd>Occupied France</dd>
+                    </div>
+                    <div>
+                        <dt>Role</dt>
+                        <dd>SOE agent</dd>
+                    </div>
+                    <div>
+                        <dt>Recognition</dt>
+                        <dd>George Cross</dd>
+                    </div>
+                </dl>
+            </header>
+
+            <section class="content-grid">
+                <article class="body-copy">
+                    <p class="section-label">The Record</p>
+                    <h2>Someone had to carry the message.</h2>
+
+                    <p>
+                        Violette Szabó served with F Section of Britain’s
+                        Special Operations Executive during the Second World
+                        War. Her work in France supported resistance networks
+                        operating under German occupation.
+                    </p>
+
+                    <p>
+                        Captured during a 1944 mission, she was imprisoned,
+                        deported to Ravensbrück concentration camp, and executed
+                        in early 1945. She was awarded the George Cross
+                        posthumously for courage and endurance.
+                    </p>
+
+                    <p>
+                        This Common Record is a public-facing introduction to
+                        her life and legacy. It is not an official government
+                        record. Its purpose is to keep history accessible,
+                        printable, and shared.
+                    </p>
+                </article>
+
+                <aside class="record-card">
+                    <p class="section-label">Record Summary</p>
+
+                    <dl>
+                        <div>
+                            <dt>Organization</dt>
+                            <dd>Special Operations Executive · F Section</dd>
+                        </div>
+
+                        <div>
+                            <dt>Primary role</dt>
+                            <dd>Courier and resistance operative</dd>
+                        </div>
+
+                        <div>
+                            <dt>Final mission</dt>
+                            <dd>Occupied France · 1944</dd>
+                        </div>
+
+                        <div>
+                            <dt>Legacy</dt>
+                            <dd>
+                                George Cross recipient; remembered for courage
+                                under capture
+                            </dd>
+                        </div>
+                    </dl>
+                </aside>
+            </section>
+
+            <section class="downloads" aria-labelledby="downloads-heading">
+                <p class="section-label">Maker Files</p>
+                <h2 id="downloads-heading">Common Record materials</h2>
+
+                <div class="download-grid">
+                    <a class="download-card" href="#coming-soon">
+                        <span>Release in development</span>
+                        <strong>Sticker Sheet</strong>
+                        <em>Printable artwork · Coming soon</em>
+                    </a>
+
+                    <a class="download-card" href="#coming-soon">
+                        <span>Release in development</span>
+                        <strong>Tag Sheet</strong>
+                        <em>34 × 43 mm engraving layouts · Coming soon</em>
+                    </a>
+
+                    <a class="download-card" href="#coming-soon">
+                        <span>Release in development</span>
+                        <strong>Source Pack</strong>
+                        <em>SVG, PDF, and research links · Coming soon</em>
+                    </a>
+                </div>
+            </section>
+
+            <section class="sources" id="sources">
+                <p class="section-label">Sources</p>
+                <h2>Read further</h2>
+
+                <ul>
+                    <li>
+                        <a
+                            href="https://www.iwm.org.uk/history/who-was-violette-szabo"
+                        >
+                            Imperial War Museums — “Who Was Violette Szabo?”
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/2148284/violette-reine-elizabeth-szabo/"
+                        >
+                            Commonwealth War Graves Commission — casualty record
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.thegazette.co.uk/London/issue/37820/supplement/6127/data.pdf"
+                        >
+                            The London Gazette — George Cross citation
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <p class="footer-note" id="coming-soon">
+                Violette · Common Record 001 · Held in common
+            </p>
+        </main>
+    </body>
+</html>
